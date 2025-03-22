@@ -1,0 +1,11 @@
+[package]
+name = "my_kernel"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+align_ext = "0.1.0"
+ostd = { path = "../asterinas/ostd" }
+
+[workspace]
+exclude = ["target/osdk/base", "target/osdk/test-base"]

@@ -1,0 +1,12 @@
+[workspace]
+
+[package]
+name = "my_kernel-osdk-bin"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies.my_kernel]
+path = "../my_kernel"
+default-features = false
+
+[features]
