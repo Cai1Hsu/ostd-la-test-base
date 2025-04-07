@@ -1,10 +1,9 @@
 ASTERINAS_DIR := ./asterinas
 
 PATCHES := \
-    https://patch-diff.githubusercontent.com/raw/oscomp/asterinas/pull/6.patch \
-    https://patch-diff.githubusercontent.com/raw/oscomp/asterinas/pull/3.patch \
-    https://patch-diff.githubusercontent.com/raw/asterinas/asterinas/pull/1915.patch \
-	https://patch-diff.githubusercontent.com/raw/Cai1Hsu/asterinas/pull/1.patch
+	https://github.com/Cai1Hsu/asterinas/pull/1.patch \
+	https://github.com/oscomp/asterinas/pull/7.patch \
+	https://github.com/oscomp/asterinas/pull/3.patch \
 
 patch:
 	@echo "Applying patches to $(ASTERINAS_DIR)"
