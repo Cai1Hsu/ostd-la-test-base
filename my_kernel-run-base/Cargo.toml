@@ -9,4 +9,13 @@ edition = "2021"
 path = "../my_kernel"
 default-features = false
 
+[dependencies.osdk-frame-allocator]
+path = "../asterinas/osdk/deps/frame-allocator"
+
+[dependencies.osdk-heap-allocator]
+path = "../asterinas/osdk/deps/heap-allocator"
+
+[dependencies.ostd]
+path = "../asterinas/ostd"
+
 [features]
