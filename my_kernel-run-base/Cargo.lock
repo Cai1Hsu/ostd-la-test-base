@@ -249,7 +249,7 @@ checksum = "c19937216e9d3aa9956d9bb8dfc0b0c8beb6058fc4f7a4dc4d850edf86a237d6"
 
 [[package]]
 name = "linux-boot-params"
-version = "0.11.3"
+version = "0.14.1"
 
 [[package]]
 name = "lock_api"
@@ -263,9 +263,9 @@ dependencies = [
 
 [[package]]
 name = "log"
-version = "0.4.26"
+version = "0.4.27"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "30bde2b3dc3671ae49d8e2e9f044c7c005836e7a023ee57cffa25ab82764bb9e"
+checksum = "13dc2df351e3202783a1fe0d44375f7295ffb4049267b0f3018346dc122a1d94"
 
 [[package]]
 name = "loongArch64"
@@ -323,6 +323,9 @@ name = "my_kernel-osdk-bin"
 version = "0.1.0"
 dependencies = [
  "my_kernel",
+ "osdk-frame-allocator",
+ "osdk-heap-allocator",
+ "ostd",
 ]
 
 [[package]]
@@ -398,8 +401,25 @@ dependencies = [
 ]
 
 [[package]]
+name = "osdk-frame-allocator"
+version = "0.14.1"
+dependencies = [
+ "log",
+ "ostd",
+ "paste",
+]
+
+[[package]]
+name = "osdk-heap-allocator"
+version = "0.14.1"
+dependencies = [
+ "log",
+ "ostd",
+]
+
+[[package]]
 name = "ostd"
-version = "0.11.3"
+version = "0.14.1"
 dependencies = [
  "acpi",
  "align_ext 0.1.0",
@@ -437,7 +457,7 @@ dependencies = [
 
 [[package]]
 name = "ostd-macros"
-version = "0.11.3"
+version = "0.14.1"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -465,7 +485,13 @@ dependencies = [
 
 [[package]]
 name = "ostd-test"
-version = "0.11.3"
+version = "0.14.1"
+
+[[package]]
+name = "paste"
+version = "1.0.15"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "57c0d7b74b563b49d38dae00a0c37d4d6de9b432382b2892f0574ddcae73fd0a"
 
 [[package]]
 name = "ppv-lite86"
@@ -598,9 +624,9 @@ checksum = "94143f37725109f92c262ed2cf5e59bce7498c01bcc1502d7b9afe439a4e9f49"
 
 [[package]]
 name = "smallvec"
-version = "1.14.0"
+version = "1.15.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7fcf8323ef1faaee30a44a340193b1ac6814fd9b7b4e88e9d4519a3e4abe1cfd"
+checksum = "8917285742e9f3e1683f0a9c4e6b57960b7314d0b08d30d1ecd426713ee2eee9"
 
 [[package]]
 name = "spin"
@@ -647,9 +673,9 @@ checksum = "55937e1799185b12863d447f42597ed69d9928686b8d88a1df17376a097d8369"
 
 [[package]]
 name = "tdx-guest"
-version = "0.1.9"
+version = "0.2.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "bc94858c8c00b46ad1a46e19f3f1e72ae4e1f7fa2d702d6867d606a2c8473b9e"
+checksum = "3792a8dc443107e37c3804c655a4807605c8b275e986b0f08add336f01e49685"
 dependencies = [
  "bitflags 1.3.2",
  "iced-x86",
@@ -670,9 +696,9 @@ dependencies = [
 
 [[package]]
 name = "uguid"
-version = "2.2.0"
+version = "2.2.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ab14ea9660d240e7865ce9d54ecdbd1cd9fa5802ae6f4512f093c7907e921533"
+checksum = "0c8352f8c05e47892e7eaf13b34abd76a7f4aeaf817b716e88789381927f199c"
 
 [[package]]
 name = "unicode-ident"
@@ -746,18 +772,18 @@ dependencies = [
 
 [[package]]
 name = "zerocopy"
-version = "0.8.23"
+version = "0.8.24"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "fd97444d05a4328b90e75e503a34bad781f14e28a823ad3557f0750df1ebcbc6"
+checksum = "2586fea28e186957ef732a5f8b3be2da217d65c5969d4b1e17f973ebbe876879"
 dependencies = [
  "zerocopy-derive",
 ]
 
 [[package]]
 name = "zerocopy-derive"
-version = "0.8.23"
+version = "0.8.24"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6352c01d0edd5db859a63e2605f4ea3183ddbd15e2c4a9e7d32184df75e4f154"
+checksum = "a996a8f63c5c4448cd959ac1bab0aaa3306ccfd060472f85943ee0750f0169be"
 dependencies = [
  "proc-macro2",
  "quote",
